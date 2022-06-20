@@ -37,20 +37,16 @@ class World {
 
         }
 
-        // Instantiate items
         for (let i = 0 ; i < itemList.length ; i++) {
-
             let itemData = itemList[i];
             let newItem;
-
             if (itemData.isFood) {
                 console.log("ERROR: Food not supported yet.");
-                // Fill this in
-                return;
+                newItem = new Food(itemData.name, itemData.description);
+                console.log(newItem);
             } else {
                 newItem = new Item(itemData.name, itemData.description);
             }
-
             let itemRoom = this.rooms[itemData.room];
             itemRoom.items.push(newItem);
        }

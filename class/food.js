@@ -1,8 +1,10 @@
 
 // FILL THIS OUT
-
-class Food {
-
+const { Item } = require('./item');
+class Food extends Item {
+  constructor(name, descripttion) {
+    super(name, descripttion);
+  }
 }
 
 module.exports = {
